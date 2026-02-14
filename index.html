@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>To my Valentine</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#" class="navbar-brand" onclick="navigateTo('home'); return false;">
+      <svg class="heart-icon" viewBox="0 0 32 32" fill="none">
+        <path d="M16 28S3 18.5 3 10.5C3 6.36 6.36 3 10.5 3c2.54 0 4.8 1.26 6.16 3.19A8.48 8.48 0 0122.5 3C26.64 3 30 6.36 30 10.5 30 18.5 16 28 16 28z" fill="#FF1493"/>
+      </svg>
+      <span>To my Valentine</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" class="active" data-page="home" onclick="navigateTo('home'); return false;">Home</a>
+    <a href="#" data-page="story" onclick="navigateTo('story'); return false;">Our Story</a>
+    <a href="#" data-page="memories" onclick="navigateTo('memories'); return false;">Memories</a>
+  </div>
+
+  <!-- ══════════════════════════════════ -->
+  <!-- HOME PAGE (scrollable sections)   -->
+  <!-- ══════════════════════════════════ -->
+  <div id="page-home">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="floating-hearts" id="floatingHearts"></div>
+
+      <svg class="deco-heart deco-heart-1" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FFB6C8"/>
+      </svg>
+      <svg class="deco-heart deco-heart-2" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FDDDE6"/>
+      </svg>
+      <svg class="deco-heart deco-heart-3" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FFB6C8"/>
+      </svg>
+      <svg class="deco-heart deco-heart-4" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FDDDE6"/>
+      </svg>
+      <svg class="deco-heart deco-heart-5" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FFB6C8"/>
+      </svg>
+      <svg class="deco-heart deco-heart-6" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FDDDE6"/>
+      </svg>
+
+      <svg class="hero-heart fade-up" viewBox="0 0 64 64" fill="none">
+        <defs>
+          <linearGradient id="heartGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FF1493"/>
+            <stop offset="100%" stop-color="#DC143C"/>
+          </linearGradient>
+        </defs>
+        <path d="M32 56S6 38 6 19C6 10.72 12.72 4 21 4c4.96 0 9.36 2.42 12.08 6.14A16.95 16.95 0 0144 4C52.28 4 59 10.72 59 19 59 38 32 56 32 56z" fill="url(#heartGrad)"/>
+      </svg>
+
+      <h1 class="hero-title fade-up fade-up-delay-1">
+        <span class="line-pink">In a world full of moments,</span><br>
+        <span class="line-red">you became my forever.</span>
+      </h1>
+
+      <p class="hero-subtitle fade-up fade-up-delay-2">
+        This is our story... written in memories, smiles, and love.
+      </p>
+
+      <a href="#timer-section" class="cta-button fade-up fade-up-delay-3" id="ctaScroll">
+        Walk Through Our Love
+      </a>
+    </section>
+
+    <!-- TIMER SECTION -->
+    <section class="timer-section" id="timer-section">
+      <div class="floating-hearts floating-hearts-bg"></div>
+
+      <div class="timer-icon">
+        <svg viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="28" stroke="#FF1493" stroke-width="4" fill="none"/>
+          <circle cx="32" cy="32" r="24" stroke="#FF1493" stroke-width="0.5" fill="none" opacity="0.2"/>
+          <line x1="32" y1="32" x2="32" y2="16" stroke="#FF1493" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="32" y1="32" x2="44" y2="32" stroke="#FF1493" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="32" cy="32" r="2.5" fill="#FF1493"/>
+        </svg>
+      </div>
+
+      <h2 class="timer-title">Time We've Loved Each Other</h2>
+      <p class="timer-subtitle">Every second with you is a memory I treasure.</p>
+
+      <div class="timer-grid">
+        <div class="timer-card">
+          <span class="timer-number" id="timer-days">0</span>
+          <span class="timer-label">Days</span>
+        </div>
+        <div class="timer-card">
+          <span class="timer-number" id="timer-hours">0</span>
+          <span class="timer-label">Hours</span>
+        </div>
+        <div class="timer-card">
+          <span class="timer-number" id="timer-minutes">0</span>
+          <span class="timer-label">Minutes</span>
+        </div>
+        <div class="timer-card">
+          <span class="timer-number" id="timer-seconds">0</span>
+          <span class="timer-label">Seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- REASONS SECTION -->
+    <section class="reasons-section">
+      <div class="floating-hearts floating-hearts-bg"></div>
+
+      <div class="reasons-icon">
+        <svg viewBox="0 0 64 64" fill="none">
+          <path d="M32 4L36.5 25.5L58 20L40 32L58 44L36.5 38.5L32 60L27.5 38.5L6 44L24 32L6 20L27.5 25.5L32 4Z" fill="#FF1493"/>
+          <circle cx="52" cy="10" r="3" fill="#FF1493"/>
+          <circle cx="54" cy="8" r="1.5" fill="#FF1493" opacity="0.5"/>
+        </svg>
+      </div>
+
+      <h2 class="reasons-title">Reasons My Heart Chose You</h2>
+
+      <div class="reasons-list">
+        <div class="reason-card">
+          <svg class="reason-heart" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FF1493"/>
+          </svg>
+          <span>The way you smile without trying</span>
+        </div>
+        <div class="reason-card">
+          <svg class="reason-heart" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FF1493"/>
+          </svg>
+          <span>The kindness in your heart</span>
+        </div>
+        <div class="reason-card">
+          <svg class="reason-heart" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FF1493"/>
+          </svg>
+          <span>The way you understand me</span>
+        </div>
+        <div class="reason-card">
+          <svg class="reason-heart" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FF1493"/>
+          </svg>
+          <span>The way you make my world feel lighter</span>
+        </div>
+        <div class="reason-card">
+          <svg class="reason-heart" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FF1493"/>
+          </svg>
+          <span>The way loving you feels effortless</span>
+        </div>
+        <div class="reason-card">
+          <svg class="reason-heart" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FF1493"/>
+          </svg>
+          <span>The comfort I find in your presence</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="love-footer">
+      <!-- Small decorative background hearts -->
+      <svg class="footer-deco-heart fh-1" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="white"/>
+      </svg>
+      <svg class="footer-deco-heart fh-2" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="white"/>
+      </svg>
+      <svg class="footer-deco-heart fh-3" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="white"/>
+      </svg>
+      <svg class="footer-deco-heart fh-4" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="white"/>
+      </svg>
+      <svg class="footer-deco-heart fh-5" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="white"/>
+      </svg>
+      <svg class="footer-deco-heart fh-6" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="white"/>
+      </svg>
+      <svg class="footer-deco-heart fh-7" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="white"/>
+      </svg>
+      <svg class="footer-deco-heart fh-8" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="white"/>
+      </svg>
+
+      <!-- Large central heart container -->
+      <div class="footer-big-heart">
+        <!-- SVG heart background shape -->
+        <svg class="footer-heart-bg" viewBox="0 0 300 280" fill="none">
+          <defs>
+            <radialGradient id="heartBgGrad" cx="50%" cy="45%" r="55%">
+              <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+              <stop offset="80%" stop-color="white" stop-opacity="0.1"/>
+              <stop offset="100%" stop-color="white" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <path d="M150 260 C150 260 5 170 5 95 C5 42 42 5 95 5 C120 5 142 18 150 35 C158 18 180 5 205 5 C258 5 295 42 295 95 C295 170 150 260 150 260Z" fill="url(#heartBgGrad)"/>
+        </svg>
+
+        <!-- Content on top of heart -->
+        <div class="footer-heart-content">
+          <h2 class="footer-quote">
+            No matter where life takes us, my heart will always find its way back to you.
+          </h2>
+
+          <a href="#" class="footer-cta" id="valentineCta">
+            <span>Will You Be My Valentine?</span>
+            <svg class="footer-cta-heart" viewBox="0 0 24 24" fill="none">
+              <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FF1493"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- END HOME PAGE -->
+
+  <!-- OUR STORY PAGE -->
+  <div class="page-section" id="page-story">
+    <section class="story-header">
+      <div class="floating-hearts floating-hearts-bg"></div>
+      <svg class="story-book-icon" viewBox="0 0 64 64" fill="none">
+        <path d="M8 10C8 10 16 6 32 6C48 6 56 10 56 10V54C56 54 48 50 32 50C16 50 8 54 8 54V10Z" stroke="#FF1493" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M32 6V50" stroke="#FF1493" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M18 18H28" stroke="#FF1493" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M18 26H26" stroke="#FF1493" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M36 18H46" stroke="#FF1493" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M36 26H44" stroke="#FF1493" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="22" cy="36" r="3" fill="#FF1493" opacity="0.3"/>
+        <circle cx="42" cy="36" r="3" fill="#FF1493" opacity="0.3"/>
+      </svg>
+      <h1 class="story-main-title">Our Love Story</h1>
+      <p class="story-main-subtitle">A journey of two hearts becoming one</p>
+    </section>
+
+    <section class="timeline-section">
+      <div class="floating-hearts floating-hearts-bg"></div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <!-- Event 1 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#FF1493" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span>December 5, 2025</span>
+            </div>
+            <h3 class="timeline-card-title">The Day We Met</h3>
+            <p class="timeline-card-text">On a random day of filming, I finally met the famous "menina do café”. I had no idea you were about to become my favorite person… the girl of my eyes… my great love.</p>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+            </svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#FF1493" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span>December 7, 2025</span>
+            </div>
+            <h3 class="timeline-card-title">Our First Conversation</h3>
+            <p class="timeline-card-text">“Why not keep it casual?” Well… that was the plan that day. But then we talked for ages and I realized... laughing at myself... that I would never be able to keep it casual with you.</p>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#FF1493" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span>December 22, 2025</span>
+            </div>
+            <h3 class="timeline-card-title">The First Laugh We Shared</h3>
+            <p class="timeline-card-text">Eventually the “panic mode” calmed down and you said yes to going out with me. “SEVEN HOURS STRAIGHT?!” you said. And now even 24 hours doesn’t feel like enough, because that day everything just clicked and it was perfect. Even if you did run out of my car at the end… but it’s fine. 😂</p>
+          </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#FF1493" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span>February 7, 2025</span>
+            </div>
+            <h3 class="timeline-card-title">You Became My Safe Place</h3>
+            <p class="timeline-card-text">The real day. The full stages. The real click... when we knew there was no turning back. We just wanted to spend the rest of our days building our future. You became my home, my safe place, my comfort… my everything.</p>
+          </div>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#FF1493" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span>Today</span>
+            </div>
+            <h3 class="timeline-card-title">Still Choosing You</h3>
+            <p class="timeline-card-text">Every single day, I wake up and choose you. And I will keep choosing you, for all the days to come.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Story ending -->
+    <section class="story-ending">
+      <div class="floating-hearts floating-hearts-bg"></div>
+      <h2 class="story-ending-title">And this is just the beginning...</h2>
+      <p class="story-ending-text">Our story continues to unfold with each passing day, each shared smile, each gentle touch. I can't wait to write the next chapter with you.</p>
+    </section>
+  </div>
+
+  <!-- MEMORIES PAGE -->
+  <div class="page-section" id="page-memories">
+    <!-- Header -->
+    <section class="memories-header">
+      <div class="floating-hearts floating-hearts-bg"></div>
+      <svg class="memories-cam-icon" viewBox="0 0 64 64" fill="none">
+        <rect x="8" y="16" width="48" height="36" rx="6" stroke="#FF1493" stroke-width="3.5" fill="none"/>
+        <circle cx="32" cy="34" r="10" stroke="#FF1493" stroke-width="3.5" fill="none"/>
+        <circle cx="32" cy="34" r="4" fill="#FF1493"/>
+        <path d="M22 16l3-6h14l3 6" stroke="#FF1493" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1 class="memories-title">Our Memories</h1>
+      <p class="memories-subtitle">Every photo tells our story, every moment is a treasure</p>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="memories-gallery">
+      <div class="floating-hearts floating-hearts-bg"></div>
+
+      <div class="memory-card" onclick="openMemory(this)">
+        <div class="memory-img"><img src="fotos/firstday.jpg" alt="Memory"></div>
+        <div class="memory-info">
+          <div class="memory-date"><span>⭐</span> December 22, 2025</div>
+          <h3 class="memory-name">Our First Date</h3>
+          <p class="memory-desc">Our tiny “SEVEN HOURS STRAIGHT?!” date. Super cute, super happy, and very sushi-filled. 🍣</p>
+        </div>
+      </div>
+
+      <div class="memory-card" onclick="openMemory(this)">
+        <div class="memory-img"><img src="fotos/twoloves.jpg" alt="Memory"></div>
+        <div class="memory-info">
+          <div class="memory-date"><span>⭐</span> January 3, 2026</div>
+          <h3 class="memory-name">The two loves of my life</h3>
+          <p class="memory-desc">The two great loves of my life, side by side.</p>
+        </div>
+      </div>
+
+      <div class="memory-card" onclick="openMemory(this)">
+        <div class="memory-img"><img src="fotos/music.jpg" alt="Memory"></div>
+        <div class="memory-info">
+          <div class="memory-date"><span>⭐</span> January 19, 2026</div>
+          <h3 class="memory-name">Hey siri, play Lost Me by GIVEON</h3>
+          <p class="memory-desc">The first little snippet of a song I dedicated to you</p>
+        </div>
+      </div>
+
+      <div class="memory-card" onclick="openMemory(this)">
+        <div class="memory-img"><img src="fotos/autismo.JPG" alt="Memory"></div>
+        <div class="memory-info">
+          <div class="memory-date"><span>⭐</span> January 21, 2026</div>
+          <h3 class="memory-name">Autism :P</h3>
+          <p class="memory-desc">Why take aesthetic photos when we’re just two autistic cuties? 😭</p>
+        </div>
+      </div>
+
+      <div class="memory-card" onclick="openMemory(this)">
+        <div class="memory-img"><img src="fotos/bully.jpg" alt="Memory"></div>
+        <div class="memory-info">
+          <div class="memory-date"><span>⭐</span> January 21, 2026</div>
+          <h3 class="memory-name">Upsi... :P</h3>
+          <p class="memory-desc">Bullying will always be our biggest love language… at least for me hehe.</p>
+        </div>
+      </div>
+
+      <div class="memory-card" onclick="openMemory(this)">
+        <div class="memory-img"><img src="fotos/ganggang.JPG" alt="Memory"></div>
+        <div class="memory-info">
+          <div class="memory-date"><span>⭐</span> January 22, 2026</div>
+          <h3 class="memory-name">Stylish</h3>
+          <p class="memory-desc">Oh yeah, bitches... here’s our drip. 😮‍💨</p>
+        </div>
+      </div>
+
+      <div class="memory-card" onclick="openMemory(this)">
+        <div class="memory-img"><img src="fotos/nature.JPG" alt="Memory"></div>
+        <div class="memory-info">
+          <div class="memory-date"><span>⭐</span> February 3, 2026</div>
+          <h3 class="memory-name">Adventurous day</h3>
+          <p class="memory-desc">This photo looks like AI for some reason, but it’s ridiculously cute. The perfect snapshot of our super adventurous day, ending with our night levada walk.</p>
+        </div>
+      </div>
+
+      <div class="memory-card" onclick="openMemory(this)">
+        <div class="memory-img"><img src="fotos/dinner.jpg" alt="Memory"></div>
+        <div class="memory-info">
+          <div class="memory-date"><span>⭐</span> February 4, 2026</div>
+          <h3 class="memory-name">Mixed feelings day</h3>
+          <p class="memory-desc">A car accident that led to you meeting my mom… and me cooking you my first dinner. Some bad things really do turn into good ones.</p>
+        </div>
+      </div>
+
+      <div class="memory-card" onclick="openMemory(this)">
+        <div class="memory-img"><img src="fotos/words.jpg" alt="Memory"></div>
+        <div class="memory-info">
+          <div class="memory-date"><span>⭐</span> February 6, 2026</div>
+          <h3 class="memory-name">:P</h3>
+          <p class="memory-desc">Big words that define our little world.</p>
+        </div>
+      </div>
+
+      <div class="memory-card" onclick="openMemory(this)">
+        <div class="memory-img"><img src="fotos/hotel1.JPG" alt="Memory"></div>
+        <div class="memory-info">
+          <div class="memory-date"><span>⭐</span> February 6, 2026</div>
+          <h3 class="memory-name">Gay Hotel Days</h3>
+          <p class="memory-desc">Cute little feet in our cute little gay hotel. One of the most special days in our story.</p>
+        </div>
+      </div>
+
+      <div class="memory-card" onclick="openMemory(this)">
+        <div class="memory-img"><img src="fotos/casal.JPG" alt="Memory"></div>
+        <div class="memory-info">
+          <div class="memory-date"><span>⭐</span> February 6, 2026</div>
+          <h3 class="memory-name">Casal da porra</h3>
+          <p class="memory-desc">Is there a prettier couple? Obviously not. LOL.</p>
+        </div>
+      </div>
+
+      <!-- Add Memory Button -->
+      <button class="add-memory-btn" onclick="openAddMemory()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+          <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        <span>Add New Memory</span>
+      </button>
+
+    </section>
+
+    <!-- Quote ending -->
+    <section class="memories-quote-section">
+      <div class="floating-hearts floating-hearts-bg"></div>
+      <svg class="memories-quote-heart" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="#FF1493"/>
+      </svg>
+      <p class="memories-quote-text">"A thousand photos couldn't capture how much I love you, but each one holds a piece of my heart."</p>
+    </section>
+  </div>
+
+  <!-- Memory fullscreen modal -->
+  <div class="memory-modal" id="memoryModal">
+    <div class="memory-modal-img" id="modalImg"></div>
+    <button class="memory-modal-close" onclick="closeMemory()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="memory-modal-content">
+      <div class="memory-modal-date" id="modalDate"></div>
+      <h3 class="memory-modal-name" id="modalName"></h3>
+      <p class="memory-modal-desc" id="modalDesc"></p>
+    </div>
+  </div>
+
+  <!-- Add Memory Modal -->
+  <div class="add-memory-modal" id="addMemoryModal">
+    <div class="add-memory-sheet">
+      <div class="add-memory-header">
+        <h3 class="add-memory-title">New Memory</h3>
+        <button class="add-memory-close" onclick="closeAddMemory()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Photo upload -->
+      <div class="add-memory-upload" id="photoUploadArea" onclick="document.getElementById('photoInput').click()">
+        <input type="file" id="photoInput" accept="image/*" hidden>
+        <div class="upload-placeholder" id="uploadPlaceholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FF1493" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <span>Tap to add photo</span>
+        </div>
+        <img id="photoPreview" class="upload-preview" style="display:none;">
+      </div>
+
+      <!-- Date -->
+      <div class="add-memory-field">
+        <label>Date</label>
+        <input type="text" id="memoryDateInput" placeholder="e.g. Summer 2024">
+      </div>
+
+      <!-- Title -->
+      <div class="add-memory-field">
+        <label>Title</label>
+        <input type="text" id="memoryTitleInput" placeholder="Give this memory a name">
+      </div>
+
+      <!-- Description -->
+      <div class="add-memory-field">
+        <label>Description</label>
+        <textarea id="memoryDescInput" placeholder="What makes this moment special?" rows="3"></textarea>
+      </div>
+
+      <!-- Save button -->
+      <button class="add-memory-save" onclick="saveMemory()">
+        <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+          <path d="M12 21S2 14 2 8.5C2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0116.5 3C19.58 3 22 5.42 22 8.5 22 14 12 21 12 21z" fill="white"/>
+        </svg>
+        <span>Save Memory</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
